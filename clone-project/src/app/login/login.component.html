@@ -1,0 +1,74 @@
+<section class="section mb-5">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <img class="img-fluid mx-auto d-block mb-5"
+          src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/avod/AV_Logo_150._CB430404026_.png"
+          alt="">
+      </div>
+      <div class="col-md-4 "></div>
+      <div class="col-md-5 border">
+        <div class="container container--mini">
+          <h2 class="mt-3">Giriş yap</h2>
+          <form name="loginform" id="loginform" action="https://themes.getbootstrap.com/wp-login.php" method="post">
+            <div class="form-group">
+              <label class="fw-bold" for="user_login">E-posta adresi veya telefon numarası</label>
+              <input required maxlength="30" minlength="3" [(ngModel)]="newProduct.name" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"   type="text" name="pName" #name="ngModel" class="form-control inputsLogin">
+              <div class="alert alert-danger" *ngIf="!name.valid && name.touched">
+                <p *ngIf="name.errors?.required">! E-posta adresinizi veya cep telefonu numaranızı girin. </p>
+                <p *ngIf="name.errors?.pattern">E-mail veya cep telefonu adresi bulunamadı</p>
+                <p *ngIf="name.errors?.minlength">mininumum 5 karakterden fazla girmelisiniz</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="fw-bold mt-2" for="user_pass">Şifre</label>
+              <a class="form-sublink float-end mt-2 text-decoration-none"
+                href="https://themes.getbootstrap.com/my-account/lost-password/">Şifremi
+                unuttum?</a>
+              <input required [(ngModel)]="newProduct.description" type="password" name="password" #password="ngModel"
+              maxlength="30" minlength="3" class="form-control mt-2 inputsPassword">
+              <div class="alert alert-danger"  *ngIf="!password.valid && password.touched">
+                ! Şifrenizi girin
+              </div>
+            </div>
+          </form>
+          <div class="d-grid gap-2">
+            <button (click)="addProduct(newProduct)" type="submit " class="btn btn-warning mt-3  ">Giriş yap</button>
+          </div>
+          <p class="mt-3">
+            Oturum açarak, Amazon'un <span [style.color]="color">Kullanım ve Satış Koşulları'nı</span> kabul etmiş
+            olursunuz.
+            Kişisel verilerinizin Amazon tarafından nasıl işlendiğine ilişkin detaylı bilgi için
+            <span [style.color]="color">Gizlilik Bildirimi, Çerez Bildirimi</span> ve <span [style.color]="color">İlgi
+              Alanına Dayalı Tanıtımları </span> inceleyebilirsiniz.
+          </p>
+
+          <p class="login-remember mt-2">
+            <label><input name="rememberme" type="checkbox" id="rememberme" value="forever">
+              Oturumum açık kalsın. <a href="#" class="text-decoration-none">Ayrıntılar</a>
+            </label></p>
+
+          <footer class="blockquote-footer small text-center text-gray-soft" >Amazon hesabınızı yok mu? </footer>
+
+          <div class="d-grid gap-2 mb-3">
+            <button class="border-1 " type="button">Amazon hesabınızı oluşturun</button>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<footer class="pt-4 my-md-5 pt-md-5 border-top mb-5 ">
+  <div class="row my-5">
+
+    <div class="text-center mt-5">
+      <a class="text-decoration-none small" href="#">kullanım koşulları</a>
+      <a class="text-decoration-none small mx-5" href="#">gizlilik bildirimi</a>
+      <a class="text-decoration-none small" href="#">Yardım</a>
+    </div>
+    <p class="text-muted small text-center mt-2 mb-5">© 1996-2021, Amazon.com, Inc. veya bağlı ortaklıkları</p>
+  </div>
+</footer>

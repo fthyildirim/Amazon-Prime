@@ -1,0 +1,38 @@
+#back {
+  background-color: rgb(27, 37, 48);
+  height: 77px;
+}
+
+#btnSearch:hover {
+  border: 0.3px solid white;
+}
+
+#btnSearch {
+  width: 252px;
+  height: 39px;
+  border: 00.3px solid grey;
+  background-color: rgb(27, 37, 47);
+}
+
+.box>input {
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSearch {
+  margin-left: -50px !important;
+  font-size: 20px;
+  color: #777;
+}
+.dropdown:hover>.dropdown-menu{
+  display: block;
+}
