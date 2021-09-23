@@ -14,6 +14,6 @@ export class NavbarComponent implements OnInit {
 
 
   
-  color: string ="red"
+  color: string ="orange"
   border: string ="1px"
 }

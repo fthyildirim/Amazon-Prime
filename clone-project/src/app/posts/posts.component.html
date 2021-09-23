@@ -1,85 +1,40 @@
-<div class="container" id="body">
+<div class="container-fluid ms-3 my-3" *ngIf="title">
   <div class="row">
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="face face1" id="part1">
-          <div class="content">
-            <img src="./assets/1.jpg" alt="#">
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
-              at.</p>
-            <a href="https://www.youtube.com/channel/UCm-vfzxyCmFJ65sMeM-PMyQ">Read More</a>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-12">
+      <h6 class="text-white fw-bold">{{title}}</h6>
     </div>
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="face face1" id="part1">
-          <div class="content">
-            <img src="./assets/1.jpg" alt="#">
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
-              at.</p>
-            <a href="https://www.youtube.com/channel/UCm-vfzxyCmFJ65sMeM-PMyQ">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="face face1" id="part1">
-          <div class="content">
-            <img src="./assets/1.jpg" alt="#">
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
-              at.</p>
-            <a href="https://www.youtube.com/channel/UCm-vfzxyCmFJ65sMeM-PMyQ">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="card">
-        <div class="face face1" id="part1">
-          <div class="content">
-            <img src="./assets/1.jpg" alt="#">
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
-              at.</p>
-            <a href="https://www.youtube.com/channel/UCm-vfzxyCmFJ65sMeM-PMyQ">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="card">
-        <div class="face face1" id="part1">
-          <div class="content">
-            <img src="./assets/1.jpg" alt="#">
-          </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident
-              at.</p>
-            <a href="https://www.youtube.com/channel/UCm-vfzxyCmFJ65sMeM-PMyQ">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
+<div class="movie-list mt-2">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let card of cards">
+      <div class="card">
+        <div> 
+          <div class="card-image">
+            <img class="img-fluid" [src]="card.imageUrl">
+          </div>
+        </div>
+        <div class="card-content text-white ">
+          <p class="card-title">  
+            <i class="fas fa-play-circle text-dark bg-white fs-2 border border-1 rounded-circle"></i><span class=" mx-2 text-white">Oynat</span>
+            <i class="fas fa-ban text-white  fs-2"></i><igx-icon class="fa-pluss text-white fs-2 ">add</igx-icon></p>
+           <p class="text-muted fw-bold fs-6 ">
+            {{card.text}} 
+           </p>
+           <span class="textP ms-4">
+            {{card.textP}}
+           </span>
+          
+           <p class="fw-normal lh-sm">
+             {{card.placeholder}}
+           </p>
+           <h5 class="footer">
+            {{card.footer}}  <i class="fas fa-comment-alt mx-3"></i>
+            <span class="border-secondary border">+18 </span>
+           </h5>          
+          </div>   
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+

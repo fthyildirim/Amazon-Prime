@@ -9,55 +9,53 @@
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarText">
+    <div class="collapse navbar-collapse  " id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
-        <li class="nav-item">
-          <a class="nav-link active text-white fw-bold" aria-current="page" href="#"><ins>Anasayfa</ins></a>
+        <li class="nav-item ">
+          <a class="nav-link fw-bold text-white fs-5" aria-current="/page" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Anasayfa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fw-bold text-muted" href="#">Tv Dizileri</a>
+          <a class="nav-link  fw-bold text-white fs-5" routerLink="/series" routerLinkActive="active-link">Tv Dizileri</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fw-bold text-muted" href="#">Filmler</a>
+          <a class="nav-link fw-bold text-white fs-5" routerLink="/movies" routerLinkActive="active-link">Filmler</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fw-bold text-muted" href="#">Çocuk</a>
+          <a class="nav-link fw-bold text-white fs-5" routerLink="/child" routerLinkActive="active-link">Çocuk</a>
         </li>
       </ul>
-      <form class="box body form-inline ">
-        <input class="form-control me-sm-2 text-light me-sm-auto mb-sm-2 mt-2" id="btnSearch" type="search" placeholder="Ara" aria-label="Search">
-
-      </form>
+ 
+        <span  _ngcontent-ppo-c51="" class="p-input-icon-left">
+          <i _ngcontent-ppo-c51="" class="pi pi-search"></i>
+          <input id="Search" _ngcontent-ppo-c51="" type="text" pinputtext="" placeholder="Ara" class="p-inputtext p-component ng-pristine ng-valid ng-touched">
+        </span>
+    
       
 
-
-
-
-      <span id="cuorser">
-        <div class="dropdown text-end ms-3 me-5 " >
-      
-          <a href="#" class="d-block link-secondary text-decoration-none dropdown-toggle show" id="dropdownUser1"
+      <span id="cuorser" >
+        <div class="dropdown text-end ms-3 me-5 "  >
+          <a href="#" class="d-block link-secondary text-decoration-none dropdown-toggle" id="dropdownUser1"
             data-bs-toggle="dropdown" aria-expanded="true">
             <img
               src="https://avatars.githubusercontent.com/u/66695748?s=400&u=7b43b34095c5e3b5ff0b3b799959a09d80634716&v=4"
               alt="mdo" width="32" height="32" class="rounded-circle border border-3 border-success">
             <span class=" text-secondary mx-2 ">Fatih</span>
           </a>
-  
-
-          <ul class="dropdown-menu text-small show " id="myDropdown" aria-labelledby="dropdownUser1"
-            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(-55px, 190px);"
-            data-popper-placement="top-start">
-            <li><a class="dropdown-item" href="#"><span [style.color]="color"><i class='fa fa-user-circle'
-                    style='font-size:36px'></i></span> New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+          <ul class="dropdown-menu text-small " id="myDropdown "
+            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(-55px, 295px); background-color: rgb(15,23,30);" >
+            <li><a class="dropdown-item text-primary" href="#"><span [style.color]="color"><i class='fas fa-house-user mx-2'
+                    style='font-size:30px'></i></span>Çocuklar</a></li>
+                    <li><a class="dropdown-item text-primary" href="#"><span><i class='fas fa-plus mx-2 text-grey'
+                      style='font-size:30px'></i></span>Yeni Ekle</a></li>
+            <li><a class="dropdown-item text-primary" href="#">Profili düzenle</a></li>
+            <li><a routerLink="/admin" class="dropdown-item text-primary" href="#" routerLinkActive="active" >Daha Fazla Bilgi Edinin</a></li>
+            <li>
+              <li><a routerLink="/admin" class="dropdown-item text-primary" href="#" routerLinkActive="active" >Fatih? değil misiniz? <br>Çıkış yap</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item text-primary" href="#" routerLink="/exit" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Çıkış</a></li>
           </ul>
-   
         </div>
 
       </span>

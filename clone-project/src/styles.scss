@@ -1,2 +1,100 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import "~font-awesome/scss/font-awesome.scss";
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+@import './_app-layout';
+@import './_variables';
+
+
+.light-theme {
+    @include igx-light-theme($default-palette);
+}
+
+$grays-btn-color: igx-color($green-palette, 'grays', 800);
+
+/* autoprefixer grid: on */
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    
+}
+
+@include igx-core();
+@include igx-typography();
+@include igx-theme(
+    $palette: $palette,
+    $schema: $schema,
+    $legacy-support: $legacy-support
+);
+
+:root {
+    @include igx-palette-vars($palette);
+}
+
+.light-theme {
+    @include igx-light-theme($palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+    @include igx-dark-theme(
+        $palette: $green-palette,
+        $legacy-support: $legacy-support
+    );
+
+    .grid-chart-contextmenu-wrapper {
+        @include igx-fluent-dark-theme($fluent-excel-palette);
+    }
+}
+
+.fin-dark-theme {
+    @include igx-dark-theme($green-palette);
+    background: #333;
+
+    ::-moz-placeholder {
+        opacity: 1;
+    }
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow: visible;
+
+    .owl-item {
+        &:hover {
+            z-index: 1;
+        }
+    }
+}
+
+.owl-theme {
+
+  .owl-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    pointer-events: none;
+ 
+    [class*=owl-] {
+        pointer-events: all;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        transition: background-color .3s;
+        &:hover{
+            background-color: rgba($color: #000000, $alpha: 0.7);
+        }
+    }
+  }
+}
 

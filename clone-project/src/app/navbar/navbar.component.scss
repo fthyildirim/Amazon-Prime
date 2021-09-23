@@ -3,15 +3,16 @@
   height: 77px;
 }
 
-#btnSearch:hover {
+#Search:hover {
   border: 0.3px solid white;
 }
 
-#btnSearch {
+#Search {
   width: 252px;
   height: 39px;
   border: 00.3px solid grey;
   background-color: rgb(27, 37, 47);
+  color: white;
 }
 
 .box>input {
@@ -33,6 +34,35 @@
   font-size: 20px;
   color: #777;
 }
-.dropdown:hover>.dropdown-menu{
-  display: block;
+// .dropdown:hover>.dropdown-menu{
+//   display: block; 
+// }
+
+// #back .navbar-nav li > a {
+// 	text-transform: capitalize;
+// 	color: rgb(206, 195, 195);
+// 	transition: background-color .2s, color .2s;
+ 
+// 	&:hover,
+//   &::after,
+// 	&:focus,
+//   &:active {
+// 		color: #fff;
+//     border-bottom: 1px solid #fff;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//          box-sizing: border-box;
+// 	}
+// }
+
+// #topheader .navbar-nav li.active > a {
+// 	background-color: #333;
+// 	color: #fff;
+// }
+
+
+#back .navbar-nav .active-link{
+
+  border-bottom: 1px solid white;
 }
+
